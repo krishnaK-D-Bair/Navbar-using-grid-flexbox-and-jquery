@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @media all and (min-width:790px){
+            nav{
+            display: flex;
+            background-color: aquamarine;
+            align-items: center;
+            justify-content: space-around;
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            padding: 1vh;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        }
+      
+        
+@media all and (max-width:780px){
+
+    body nav{
+            background-color: aquamarine;
+        }
+        body .clr{
+            display: flex;
+            /* width: 100%; */
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 20px;
+        }
+        
+
+      body  .manu-line{
+            width: 20px;
+            height: 3px;
+            background-color: rgb(20, 17, 17);
+            margin-top: 3px;
+        }
+
+      body  ul{
+            display: grid;
+            /* justify-content: center; */
+            background-color: rgb(26, 23, 23);
+            padding: 0 0 10px 0;
+            grid-template-columns: 1fr;
+            padding: 3px ;
+           gap: 5px;
+           font-size: 18px;
+            list-style-type: none;
+            display: none;
+        }
+       
+      body  a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            
+        }
+      body  a:hover{
+            color: black;
+            background-color: white;
+            
+        }
+        body .active{
+            display: block;
+        }
+       
+}
+
+
+    </style>
+    <header>
+        <nav>
+            <div class="clr">
+                <h1>helloWorld</h1>
+            <div class="manu" id="togglebtn">
+                <div class="manu-line"></div>
+                <div class="manu-line"></div>
+                <div class="manu-line"></div>
+            </div>
+            </div>
+            <ul id="main">
+                <li><a href="">Home</a></li>
+                <li><a href="">Course</a></li>
+                <li><a href="">Price</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Contact US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        $(document).ready(function(){
+            $("#togglebtn").click(function(){
+                $("#main").toggleClass("active")
+            })
+        })
+    </script>
+</body>
+</html>
